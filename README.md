@@ -8,6 +8,8 @@ This project studies a convolutional neural network (CNN) architecture proposed 
 
 The obtained results for CNN classification is shown in our [project report](https://github.com/tashrifbillah/Object-Detection/blob/master/Tashrif_Billah_Object_Detection.pdf). However, the attached code may suffer some memory error. Also, multi-GPU implementation is incomplete. Please feel free to contribute and give a push.
 
+The code was developed in collaboration with Alexander Loh.
+
 # Code Execution Instruction
 
 # Instruction for running code
