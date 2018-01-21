@@ -33,6 +33,8 @@ def make_parallel(model, gpu_count):
         outputs_all.append([])
 
     # Place a copy of the model on each GPU, each getting a slice of the batch
+    # Parellel GPU execution had some problems
+    # Please feel free to contribute
     for i in range(gpu_count):
         with tf.device('/gpu:%d' % i):
             with tf.name_scope('tower_%d' % i) as scope:
@@ -68,6 +70,10 @@ def load_selected_data(l):
     y = pickle.load(open("data.p","rb"))
     x = []
     for i in range(len(y)):
+        
+        # There are 10 subimages. You can load all of them if you have a 
+        # powerful GPU and adequate memory capacity. But for first hand
+        # trial, you can just load any one index out of 0-9
         if len(y[i]) == 1 and (i%10 in (1,4,9)) and y[i][0] == l:
             x.append(sp.misc.imread(os.path.join("out", "%i.png" % i)))
 
@@ -155,8 +161,11 @@ def train_cnn(x,y):
 
     # Output layer
     model.add(Dense(20, activation='softmax'))
-
+    
+    # Parellel GPU execution had some problems
+    # Please feel free to contribute
     # model = make_parallel(model, 4)
+    
     sgd = optimizers.SGD(lr=0.01, momentum=0.9)
     model = multi_gpu_model(model, gpus=4)
     model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
