@@ -1,1 +1,1 @@
-# Object-Recognition-Using-CNN
+# Image-Recognition-Using-CNN
