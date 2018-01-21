@@ -6,7 +6,7 @@ This project studies a convolutional neural network (CNN) architecture proposed 
   <img src="https://github.com/tashrifbillah/Image-Recognition-Using-CNN/blob/master/CNN.JPG"/>
 </p>
 
-The obtained results for CNN classification is shown in our [project report](https://github.com/tashrifbillah/Object-Detection/blob/master/Tashrif_Billah_Object_Detection.pdf). However, the attached code may suffer some memory error. Also, multi-GPU implementation is imcomplete. Please feel free to contribute and give a push.
+The obtained results for CNN classification is shown in our [project report](https://github.com/tashrifbillah/Object-Detection/blob/master/Tashrif_Billah_Object_Detection.pdf). However, the attached code may suffer some memory error. Also, multi-GPU implementation is incomplete. Please feel free to contribute and give a push.
 
 # Code Execution Instruction
 
